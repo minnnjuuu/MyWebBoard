@@ -41,6 +41,7 @@ $search_term = '%' . $search_query . '%';
 $stmt->bind_param('s', $search_term);
 $stmt->execute();
 $result = $stmt->get_result();
+
 ?>
 
 <!DOCTYPE html>
@@ -159,7 +160,7 @@ $result = $stmt->get_result();
 	<h1>Board</h1>
 
 	<?php if ($logged_in): ?>
-	    <p>Welcome! <a href="logout.php">Logout</a></p>
+	<p>Welcome! <a href="logout.php">Logout</a> | <a href="delete_user.php">Delete Account</a></p>
 	    <a href="create_post.php">Create New Post</a>
 
 	    <form method="get" class="search-var">
