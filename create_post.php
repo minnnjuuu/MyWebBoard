@@ -7,6 +7,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $content = $_POST['content'];
     $user_id = $_SESSION['user_id'];
 
+    //금지된 문자열 리스트
+    $forbidden_patterns=['/script/i', '/alert/i', '/</', '/>/'];
+
+    // 타이틀과 콘텐츠에서 금지된 문자열 검사
+    foreach ($forbidden_patterns as $pattern){
+	    if(preg_match($pattern, $title)||preg_match($pattern,$content)){
+		    echo "Error: Your post contains forbidden characters or words";
+		    exit;
+	    }
+    }
+
     // 파일 업로드 처리
     $file_path = null;
     if (!empty($_FILES['file']['name'])) {

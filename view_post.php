@@ -86,7 +86,7 @@ $stmt->fetch();
 <div class="container">
     <h1><?php echo htmlspecialchars($title); ?></h1>
     <p class="post-meta">By <?php echo htmlspecialchars($username); ?> on <?php echo $created_at; ?></p>
-    <p><?php echo nl2br(htmlspecialchars($content)); ?></p>
+    <p><?php echo $content; ?></p>
 
     <?php if ($file_path): ?>
         <a class="file-link" href="<?php echo htmlspecialchars($file_path); ?>">Download Attachment</a>

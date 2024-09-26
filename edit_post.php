@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="text" id="title" name="title" value="<?php echo htmlspecialchars($title); ?>" required>
 
         <label for="content">Content:</label>
-        <textarea id="content" name="content" required><?php echo htmlspecialchars($content); ?></textarea>
+        <textarea id="content" name="content" required><?php echo $content; ?></textarea>
 
         <label for="file">Upload File:</label>
         <input type="file" id="file" name="file">
