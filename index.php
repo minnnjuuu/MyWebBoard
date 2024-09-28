@@ -9,7 +9,6 @@ $logged_in = isset($_SESSION['user_id']);
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-
     $stmt = $conn->prepare("SELECT id, password FROM users WHERE username = ?");
     $stmt->bind_param('s', $username);
     $stmt->execute();
