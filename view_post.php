@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = new mysqli('127.0.0.1', 'minnnjuuu', '020411', 'board');
+$conn = new mysqli('127.0.0.1', 'secret', 'secret', 'board');
 $post_id = $_GET['id'];
 
 $stmt = $conn->prepare("SELECT posts.title, posts.content, posts.file_path, users.username, posts.created_at
