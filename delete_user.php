@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = new mysqli('127.0.0.1', 'minnnjuuu', '020411', 'board');
+$conn = new mysqli('127.0.0.1', 'secret', 'secret', 'board');
 
 // 연결 오류 처리
 if ($conn->connect_error) {
