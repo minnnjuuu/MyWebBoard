@@ -5,7 +5,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 session_start();
-$conn = new mysqli('127.0.0.1', 'minnnjuuu', '020411', 'board');
+$conn = new mysqli('127.0.0.1', 'secret', 'secret', 'board');
 
 // 연결 오류 처리
 if ($conn->connect_error) {
