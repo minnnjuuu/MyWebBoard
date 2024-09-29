@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = new mysqli('127.0.0.1', 'minnnjuuu', '020411', 'board');
+$conn = new mysqli('127.0.0.1', 'secret', 'secret', 'board');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $title = $_POST['title'];
